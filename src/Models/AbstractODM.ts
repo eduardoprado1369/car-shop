@@ -1,6 +1,4 @@
-import { Model,
-  Schema, models, model, isValidObjectId, UpdateQuery } from 'mongoose';
-import IErrorMsg from '../Interfaces/IErrorMsg';
+import { Model, Schema, models, model, UpdateQuery } from 'mongoose';
 
 export default class AbstractODM<T> {
   protected model: Model<T>;
@@ -17,8 +15,7 @@ export default class AbstractODM<T> {
     return this.model.create({ ...obj });
   }
 
-  async update(_id: string, obj: Partial<T>): Promise<T | IErrorMsg | null> {
-    if (!isValidObjectId(_id)) return { message: 'Invalid mongo id' };
+  async update(_id: string, obj: Partial<T>): Promise<T | null> {
     return this.model.findByIdAndUpdate(
       { _id },
       { ...obj } as UpdateQuery<T>,

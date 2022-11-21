@@ -27,4 +27,12 @@ export default class CarService {
     const car = new Car(result);
     return car;
   }
+
+  async update(id: string, car: Partial<ICar>): Promise<Car | null> {
+    const carODM = new CarModel();
+    const result = await carODM.update(id, car);
+    if (result === null) return result;
+    const updatedCar = new Car(result);
+    return updatedCar;
+  }
 }
