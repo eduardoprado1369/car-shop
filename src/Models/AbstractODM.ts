@@ -1,4 +1,5 @@
-import { Model, Schema, models, model, isValidObjectId, UpdateQuery } from 'mongoose';
+import { Model,
+  Schema, models, model, isValidObjectId, UpdateQuery } from 'mongoose';
 import IErrorMsg from '../Interfaces/IErrorMsg';
 
 export default class AbstractODM<T> {
@@ -23,5 +24,15 @@ export default class AbstractODM<T> {
       { ...obj } as UpdateQuery<T>,
       { new: true },
     );
+  }
+
+  async findAll(): Promise<T[]> {
+    const result = await this.model.find();
+    return result;
+  }
+
+  async findById(_id: string): Promise<T | null> {
+    // if (!isValidObjectId(id)) return { message: 'Invalid mongo id' };
+    return this.model.findById({ _id });
   }
 }
