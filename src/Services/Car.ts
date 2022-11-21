@@ -1,10 +1,9 @@
 import Car from '../Domains/Cars';
 import ICar from '../Interfaces/ICar';
-import IErrorMsg from '../Interfaces/IErrorMsg';
 import CarModel from '../Models/Car';
 
 export default class CarService {
-  async create(car: ICar): Promise<Car | IErrorMsg | null> {
+  async create(car: ICar): Promise<Car | null> {
     const carODM = new CarModel();
     const addedCar = await carODM.create(car);
     const newCar = new Car(addedCar);

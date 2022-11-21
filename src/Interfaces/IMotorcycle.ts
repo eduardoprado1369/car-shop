@@ -1,5 +1,6 @@
 export default interface IMotorcycle {
   _id?: string | undefined;
+  id?: string | undefined;
   model: string;
   year: number;
   color: string;
