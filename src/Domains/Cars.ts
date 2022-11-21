@@ -2,7 +2,7 @@ import ICar from '../Interfaces/ICar';
 import Vehicle from './Vehicle';
 
 export default class Car extends Vehicle {
-  protected car: ICar;
+  // protected car: ICar;
   private doorsQty: number;
   private seatsQty: number;
   constructor(
@@ -11,7 +11,7 @@ export default class Car extends Vehicle {
     // seatsQty: number,
   ) {
     super(car.model, car.year, car.color, car.buyValue, car._id, car.status);
-    this.car = car;
+    // this.car = car;
     // this.car.doorsQty = doorsQty;
     // this.car.seatsQty = seatsQty;
     
