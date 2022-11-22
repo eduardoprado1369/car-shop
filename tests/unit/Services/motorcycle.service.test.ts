@@ -87,80 +87,80 @@ describe('Testa o service de cars', () => {
 
     expect(result).to.deep.equal(expectedResult);
   });
-  //   it('Test o create', async function () {
-  //     const inputValue = {
-  //       model: 'Honda Cb 600f Hornet',
-  //       year: 2005,
-  //       color: 'Yellow',
-  //       status: true,
-  //       buyValue: 30.000,
-  //       category: 'Street',
-  //       engineCapacity: 600,
-  //     };
-  //     const mockedModelValue = {
-  //       _id: '6348513f34c397abcad040b2',
-  //       model: 'Honda Cb 600f Hornet',
-  //       year: 2005,
-  //       color: 'Yellow',
-  //       status: true,
-  //       buyValue: 30.000,
-  //       category: 'Street',
-  //       engineCapacity: 600,
-  //     };
-  //     const expectedResult = {
-  //       id: '6348513f34c397abcad040b2',
-  //       model: 'Honda Cb 600f Hornet',
-  //       year: 2005,
-  //       color: 'Yellow',
-  //       status: true,
-  //       buyValue: 30.000,
-  //       category: 'Street',
-  //       engineCapacity: 600,
-  //     };
-  //     sinon.stub(Model, 'create').resolves(mockedModelValue);
+  it('Test o create', async function () {
+    const inputValue = {
+      model: 'Honda Cb 600f Hornet',
+      year: 2005,
+      color: 'Yellow',
+      status: true,
+      buyValue: 30.000,
+      category: 'Street',
+      engineCapacity: 600,
+    };
+    const mockedModelValue = {
+      _id: '6348513f34c397abcad040b2',
+      model: 'Honda Cb 600f Hornet',
+      year: 2005,
+      color: 'Yellow',
+      status: true,
+      buyValue: 30.000,
+      category: 'Street',
+      engineCapacity: 600,
+    };
+    const expectedResult = {
+      id: '6348513f34c397abcad040b2',
+      model: 'Honda Cb 600f Hornet',
+      year: 2005,
+      color: 'Yellow',
+      status: true,
+      buyValue: 30.000,
+      category: 'Street',
+      engineCapacity: 600,
+    };
+    sinon.stub(Model, 'create').resolves(mockedModelValue);
 
-  //     const service = new MotorcycleService();
-  //     const result = await service.create(inputValue);
+    const service = new MotorcycleService();
+    const result = await service.create(inputValue);
 
-  //     expect(result).to.deep.equal(expectedResult);
-  //   });
-  //   describe('Testa o update', () => {
-  //     it('Testa em caso de sucesso', async function () {
-  //       const mockedModelValue = {
-  //         _id: '634852326b35b59438fbea2f',
-  //         model: 'Honda Cb 600f Hornet',
-  //         year: 2005,
-  //         color: 'Yellow',
-  //         status: true,
-  //         buyValue: 30.000,
-  //         category: 'Street',
-  //         engineCapacity: 600,
-  //       };
-  //       const inputValue = {
-  //         model: 'Honda Cb 600f Hornet',
-  //         year: 2005,
-  //         color: 'Yellow',
-  //         status: true,
-  //         buyValue: 30.000,
-  //         category: 'Street',
-  //         engineCapacity: 600,
-  //       };
-  //       const expectedResult = {
-  //         id: '634852326b35b59438fbea2f',
-  //         model: 'Honda Cb 600f Hornet',
-  //         year: 2005,
-  //         color: 'Yellow',
-  //         status: true,
-  //         buyValue: 30.000,
-  //         category: 'Street',
-  //         engineCapacity: 600,
-  //       };
-  //       sinon.stub(Model, 'findByIdAndUpdate').resolves(mockedModelValue);
+    expect(result).to.deep.equal(expectedResult);
+  });
+  describe('Testa o update', () => {
+    it('Testa em caso de sucesso', async function () {
+      const mockedModelValue = {
+        _id: '634852326b35b59438fbea2f',
+        model: 'Honda Cb 600f Hornet',
+        year: 2005,
+        color: 'Yellow',
+        status: true,
+        buyValue: 30.000,
+        category: 'Street',
+        engineCapacity: 600,
+      };
+      const inputValue = {
+        model: 'Honda Cb 600f Hornet',
+        year: 2005,
+        color: 'Yellow',
+        status: true,
+        buyValue: 30.000,
+        category: 'Street',
+        engineCapacity: 600,
+      };
+      const expectedResult = {
+        id: '634852326b35b59438fbea2f',
+        model: 'Honda Cb 600f Hornet',
+        year: 2005,
+        color: 'Yellow',
+        status: true,
+        buyValue: 30.000,
+        category: 'Street',
+        engineCapacity: 600,
+      };
+      sinon.stub(Model, 'findByIdAndUpdate').resolves(mockedModelValue);
 
-  //       const service = new MotorcycleService();
-  //       const result = await service.update('634852326b35b59438fbea2f', inputValue);
+      const service = new MotorcycleService();
+      const result = await service.update('634852326b35b59438fbea2f', inputValue);
 
-//       expect(result).to.deep.equal(expectedResult);
-//     });
-//   });
+      expect(result).to.deep.equal(expectedResult);
+    });
+  });
 });
