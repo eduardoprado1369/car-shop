@@ -3,15 +3,17 @@ import { expect } from 'chai';
 import { Model } from 'mongoose';
 import sinon from 'sinon';
 import MotorcycleService from '../../../src/Services/Motorcycle';
+import IMotorcycle from '../../../src/Interfaces/IMotorcycle';
 
 const hondaCbr1000rr = 'Honda Cbr 1000rr';
+const hondaCb600fHornet = 'Honda Cb 600f Hornet';
 describe('Testa o service de cars', () => {
   afterEach(function () { sinon.restore(); });
   it('Test o findAll', async function () {
     const mockedModelValue = [
       {
         _id: '634852326b35b59438fbea2f',
-        model: 'Honda Cb 600f Hornet',
+        model: hondaCb600fHornet,
         year: 2005,
         color: 'Yellow',
         status: true,
@@ -33,7 +35,7 @@ describe('Testa o service de cars', () => {
     const expectedResult = [
       {
         id: '634852326b35b59438fbea2f',
-        model: 'Honda Cb 600f Hornet',
+        model: hondaCb600fHornet,
         year: 2005,
         color: 'Yellow',
         status: true,
@@ -88,8 +90,8 @@ describe('Testa o service de cars', () => {
     expect(result).to.deep.equal(expectedResult);
   });
   it('Test o create', async function () {
-    const inputValue = {
-      model: 'Honda Cb 600f Hornet',
+    const inputValue: IMotorcycle = {
+      model: hondaCb600fHornet,
       year: 2005,
       color: 'Yellow',
       status: true,
@@ -99,7 +101,7 @@ describe('Testa o service de cars', () => {
     };
     const mockedModelValue = {
       _id: '6348513f34c397abcad040b2',
-      model: 'Honda Cb 600f Hornet',
+      model: hondaCb600fHornet,
       year: 2005,
       color: 'Yellow',
       status: true,
@@ -109,7 +111,7 @@ describe('Testa o service de cars', () => {
     };
     const expectedResult = {
       id: '6348513f34c397abcad040b2',
-      model: 'Honda Cb 600f Hornet',
+      model: hondaCb600fHornet,
       year: 2005,
       color: 'Yellow',
       status: true,
@@ -128,7 +130,7 @@ describe('Testa o service de cars', () => {
     it('Testa em caso de sucesso', async function () {
       const mockedModelValue = {
         _id: '634852326b35b59438fbea2f',
-        model: 'Honda Cb 600f Hornet',
+        model: hondaCb600fHornet,
         year: 2005,
         color: 'Yellow',
         status: true,
@@ -136,8 +138,8 @@ describe('Testa o service de cars', () => {
         category: 'Street',
         engineCapacity: 600,
       };
-      const inputValue = {
-        model: 'Honda Cb 600f Hornet',
+      const inputValue: IMotorcycle = {
+        model: hondaCb600fHornet,
         year: 2005,
         color: 'Yellow',
         status: true,
@@ -147,7 +149,7 @@ describe('Testa o service de cars', () => {
       };
       const expectedResult = {
         id: '634852326b35b59438fbea2f',
-        model: 'Honda Cb 600f Hornet',
+        model: hondaCb600fHornet,
         year: 2005,
         color: 'Yellow',
         status: true,
