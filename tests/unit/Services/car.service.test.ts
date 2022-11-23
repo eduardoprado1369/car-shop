@@ -57,33 +57,43 @@ describe('Testa o service de cars', () => {
 
     expect(result).to.deep.equal(expectedResult);
   });
-  it('Test o findOne', async function () {
-    const mockedModelValue = {
-      _id: '634852326b35b59438fbea2f',
-      model: 'Marea',
-      year: 2002,
-      color: 'Black',
-      status: true,
-      buyValue: 15.99,
-      doorsQty: 4,
-      seatsQty: 5,
-    };
-    const expectedResult = {
-      id: '634852326b35b59438fbea2f',
-      model: 'Marea',
-      year: 2002,
-      color: 'Black',
-      status: true,
-      buyValue: 15.99,
-      doorsQty: 4,
-      seatsQty: 5,
-    };
-    sinon.stub(Model, 'findById').resolves(mockedModelValue);
-
-    const service = new CarService();
-    const result = await service.findById('634852326b35b59438fbea2f');
-
-    expect(result).to.deep.equal(expectedResult);
+  describe('Testa o findById', () => {
+    it('Testa em caso de sucesso', async function () {
+      const mockedModelValue = {
+        _id: '634852326b35b59438fbea2f',
+        model: 'Marea',
+        year: 2002,
+        color: 'Black',
+        status: true,
+        buyValue: 15.99,
+        doorsQty: 4,
+        seatsQty: 5,
+      };
+      const expectedResult = {
+        id: '634852326b35b59438fbea2f',
+        model: 'Marea',
+        year: 2002,
+        color: 'Black',
+        status: true,
+        buyValue: 15.99,
+        doorsQty: 4,
+        seatsQty: 5,
+      };
+      sinon.stub(Model, 'findById').resolves(mockedModelValue);
+    
+      const service = new CarService();
+      const result = await service.findById('634852326b35b59438fbea2f');
+    
+      expect(result).to.deep.equal(expectedResult);
+    });
+    it('Testa sem sucesso', async function () {
+      sinon.stub(Model, 'findById').resolves(null);
+    
+      const service = new CarService();
+      const result = await service.findById('random');
+    
+      expect(result).to.deep.equal(null);
+    });
   });
   it('Test o create', async function () {
     const inputValue = {
@@ -119,6 +129,24 @@ describe('Testa o service de cars', () => {
 
     const service = new CarService();
     const result = await service.create(inputValue);
+
+    expect(result).to.deep.equal(expectedResult);
+  });
+  it('Testa o delete', async function () {
+    const expectedResult = {
+      _id: '634852326b35b59438fbea2f',
+      model: 'Marea',
+      year: 2002,
+      color: 'Black',
+      status: true,
+      buyValue: 15.99,
+      doorsQty: 4,
+      seatsQty: 5,
+    };
+    sinon.stub(Model, 'findByIdAndDelete').resolves(expectedResult);
+
+    const service = new CarService();
+    const result = await service.delete('634852326b35b59438fbea2f');
 
     expect(result).to.deep.equal(expectedResult);
   });
@@ -159,6 +187,23 @@ describe('Testa o service de cars', () => {
       const result = await service.update('634852326b35b59438fbea2f', inputValue);
 
       expect(result).to.deep.equal(expectedResult);
+    });
+    it('Testa sem sucesso', async function () {
+      const inputValue = {
+        model: 'Marea',
+        year: 1992,
+        color: 'Red',
+        status: true,
+        buyValue: 12.000,
+        doorsQty: 2,
+        seatsQty: 5,
+      };
+      sinon.stub(Model, 'findByIdAndUpdate').resolves(null);
+
+      const service = new CarService();
+      const result = await service.update('634852326b35b59438fbea2f', inputValue);
+
+      expect(result).to.deep.equal(null);
     });
   });
 });

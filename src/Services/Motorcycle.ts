@@ -1,10 +1,9 @@
 import Motorcycle from '../Domains/Motorcycle';
-import IErrorMsg from '../Interfaces/IErrorMsg';
 import IMotorcycle from '../Interfaces/IMotorcycle';
 import MotorcycleModel from '../Models/Motorcycle';
 
 export default class MotorcycleService {
-  async create(motorcycle: IMotorcycle): Promise<Motorcycle | IErrorMsg | null> {
+  async create(motorcycle: IMotorcycle): Promise<Motorcycle | null> {
     const motorcycleODM = new MotorcycleModel();
     const addedMotorcycle = await motorcycleODM.create(motorcycle);
     const newMotorcycle = new Motorcycle(addedMotorcycle);
