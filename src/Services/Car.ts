@@ -32,4 +32,10 @@ export default class CarService {
     const updatedCar = new Car(result);
     return updatedCar;
   }
+
+  async delete(id: string): Promise<ICar | null> {
+    const carODM = new CarModel();
+    const result = await carODM.delete(id);
+    return result;
+  }
 }

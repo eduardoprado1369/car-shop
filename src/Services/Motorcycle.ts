@@ -33,4 +33,10 @@ export default class MotorcycleService {
     const updatedMotorcycle = new Motorcycle(result);
     return updatedMotorcycle;
   }
+
+  async delete(id: string): Promise<IMotorcycle | null> {
+    const motorcycleODM = new MotorcycleModel();
+    const result = await motorcycleODM.delete(id);
+    return result;
+  }
 }

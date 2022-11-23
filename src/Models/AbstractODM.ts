@@ -29,7 +29,11 @@ export default class AbstractODM<T> {
   }
 
   async findById(_id: string): Promise<T | null> {
-    // if (!isValidObjectId(id)) return { message: 'Invalid mongo id' };
     return this.model.findById({ _id });
+  }
+
+  async delete(_id: string) {
+    const result = this.model.findByIdAndDelete({ _id });
+    return result;
   }
 }

@@ -3,6 +3,8 @@ import CarService from '../Services/Car';
 import IVehicle from '../Interfaces/IVehicle';
 import ICar from '../Interfaces/ICar';
 
+const notFoundMsg = 'Car not found';
+
 export default class CarController {
   private req: Request;
   private res: Response;
@@ -44,7 +46,7 @@ export default class CarController {
     try {
       const result = await this.service.findById(id);
       // console.log(result);
-      if (!result) return this.res.status(404).json({ message: 'Car not found' });
+      if (!result) return this.res.status(404).json({ message: notFoundMsg });
       return this.res.status(200).json(result);
     } catch (error) {
       this.next(error);
@@ -56,8 +58,19 @@ export default class CarController {
     const { body } = this.req;
     try {
       const result = await this.service.update(id, body);
-      if (!result) return this.res.status(404).json({ message: 'Car not found' });
+      if (!result) return this.res.status(404).json({ message: notFoundMsg });
       return this.res.status(200).json(result);
+    } catch (error) {
+      this.next(error);
+    }
+  }
+
+  async delete() {
+    const { id } = this.req.params;
+    try {
+      const result = await this.service.delete(id);
+      if (!result) return this.res.status(404).json({ message: notFoundMsg });
+      return this.res.status(204).end();
     } catch (error) {
       this.next(error);
     }
