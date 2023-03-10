@@ -2,7 +2,7 @@
 
 This is a back-end project which uses the principles of `OOP` to create a CRUD API that manages a Car Shop, in which users can read the existing vehicles, filter them by id, add new vehicles, update and delete existing vehicles. This application was fully tested using integration tests.
 
-# Technologies used:
+# Technologies used
 * TypeScript
 * MongoDB
 * Mongoose ODM
@@ -28,5 +28,11 @@ This is a back-end project which uses the principles of `OOP` to create a CRUD A
     `git clone git@github.com:eduardoprado1369/car-shop.git` <br>
   2- Install the dependencies: <br>
     `npm install`
+    
+# Routes
+* `GET` /cars -> lists all cars
+* `GET` /cars/:id -> lists a specific car
+* `GET` /motorcycles -> lists all motorcycles
+* `GET` /motorcycles/:id -> lists a specific motorcycle
 <br>
 * This project was developed during the Back-end module of Trybe's Web Development Course.
