@@ -29,13 +29,7 @@ The service layer of this application was fully tested using unit tests.
     `git clone git@github.com:eduardoprado1369/car-shop.git` <br>
   2. Install the dependencies: <br>
     `npm install`
-    
-# How to run the tests and coverage
-* To run the tests:  
-  `npm run test:mocha`
-* To run the test coverage:  
-  `npm run test:coverage`
-    
+
 # Routes
 * GET
   * `/cars` -> lists all cars
@@ -51,5 +45,12 @@ The service layer of this application was fully tested using unit tests.
 * DELETE
   * `/cars/:id` -> deletes a car
   * `/motorcycle/:id` -> deletes a motorcycle
+
+# How to run the tests and coverage
+* To run the tests:  
+  `npm run test:mocha`
+* To run the test coverage:  
+  `npm run test:coverage`
+    
 <br>
 * This project was developed during the Back-end module of Trybe's Web Development Course.
