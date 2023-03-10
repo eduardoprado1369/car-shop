@@ -30,9 +30,10 @@ This is a back-end project which uses the principles of `OOP` to create a CRUD A
     `npm install`
     
 # Routes
-* `GET` /cars -> lists all cars
-* `GET` /cars/:id -> lists a specific car
-* `GET` /motorcycles -> lists all motorcycles
-* `GET` /motorcycles/:id -> lists a specific motorcycle
+* GET
+  * /cars -> lists all cars
+  * /cars/:id -> lists a specific car
+  * /motorcycles -> lists all motorcycles
+  * /motorcycles/:id -> lists a specific motorcycle
 <br>
 * This project was developed during the Back-end module of Trybe's Web Development Course.
