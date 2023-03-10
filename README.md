@@ -31,9 +31,9 @@ The service layer of this application was fully tested using unit tests.
     `npm install`
     
 # How to run the tests and coverage
-* To run the tests:
+* To run the tests:  
   `npm run test:mocha`
-* To run the test coverage:
+* To run the test coverage:  
   `npm run test:coverage`
     
 # Routes
