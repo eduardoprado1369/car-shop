@@ -35,5 +35,8 @@ This is a back-end project which uses the principles of `OOP` to create a CRUD A
   * `/cars/:id` -> lists a specific car
   * `/motorcycles` -> lists all motorcycles
   * `/motorcycles/:id` -> lists a specific motorcycle
+* POST
+  * `/cars` -> creates a new car
+  * `/motorcycles` -> creates a new motorcycle
 <br>
 * This project was developed during the Back-end module of Trybe's Web Development Course.
