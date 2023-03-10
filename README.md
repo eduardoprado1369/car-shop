@@ -1,7 +1,7 @@
 # Project Car Shop
 
 This is a back-end project which uses the principles of `OOP` to create a CRUD API to manage a Car Shop, in which users can see the existing vehicles, filter them by id, add new vehicles, update and delete existing vehicles.  
-This application was fully tested using integration tests.
+The service layer of this application was fully tested using unit tests.
 
 # Technologies used
 * TypeScript
@@ -29,6 +29,12 @@ This application was fully tested using integration tests.
     `git clone git@github.com:eduardoprado1369/car-shop.git` <br>
   2. Install the dependencies: <br>
     `npm install`
+    
+# How to run the tests and coverage
+* To run the tests:
+  `npm run test:mocha`
+* To run the test coverage:
+  `npm run test:coverage`
     
 # Routes
 * GET
