@@ -40,10 +40,10 @@ This application was fully tested using integration tests.
   * `/cars` -> creates a new car
   * `/motorcycles` -> creates a new motorcycle
 * PUT
-  * `/cars` -> updates a car
-  * `/motorcycle` -> updates a motorcycle
+  * `/cars/:id` -> updates a car
+  * `/motorcycle/:id` -> updates a motorcycle
 * DELETE
-  * `/cars` -> deletes a car
-  * `/motorcycle` -> deletes a motorcycle
+  * `/cars/:id` -> deletes a car
+  * `/motorcycle/:id` -> deletes a motorcycle
 <br>
 * This project was developed during the Back-end module of Trybe's Web Development Course.
