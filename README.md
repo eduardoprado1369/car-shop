@@ -15,7 +15,7 @@ This application was fully tested using integration tests.
 
 # How to run the project
 * With Docker:  
-  1. Clone the repository:  
+1. Clone the repository:  
      `git clone git@github.com:eduardoprado1369/car-shop.git`  
   2. Start the containers that run Node and MongoDB services:  
     `docker-compose up -d` <br> * **The default port is `27017`** <br>
