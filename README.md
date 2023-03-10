@@ -14,12 +14,6 @@ This application was fully tested using integration tests.
 * Sinon
 
 # How to run the project
-<ol>
-  <li>First item</li>
-  <li>Second item</li>
-  <li>Third item</li>
-  <li>Fourth item</li>
-</ol>
 * With Docker:  
   1. Clone the repository:  
      `git clone git@github.com:eduardoprado1369/car-shop.git`  
