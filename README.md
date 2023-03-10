@@ -23,7 +23,7 @@ This is a back-end project which uses the principles of `OOP` to create a CRUD A
   4- Install the dependencies:
     `npm install`
     
-* Without Doocker:
+* Without Doocker: <br>
   1- 1- Clone the repository: <br>
     `git clone git@github.com:eduardoprado1369/car-shop.git` <br>
   2- Install the dependencies: <br>
