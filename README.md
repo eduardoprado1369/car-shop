@@ -15,17 +15,17 @@ This is a back-end project which uses the principles of `OOP` to create a CRUD A
 # How to run the project
 * With Docker: <br>
   1- Clone the repository: <br>
-      `git clone git@github.com:eduardoprado1369/car-shop.git` <br><br>
+      `git clone git@github.com:eduardoprado1369/car-shop.git` <br>
   2- Start the containers that run Node and MongoDB services: <br>
     `docker-compose up -d` <br> 
-    * The default port is `27017` <br><br>
+    * The default port is `27017` <br>
   3- Access the container's CLI: <br>
-    `docker exec -it car_shop bash` <br><br>
+    `docker exec -it car_shop bash` <br>
   4- Install the dependencies: <br>
     `npm install`
     
 * Without Docker: <br>
-  1- 1- Clone the repository: <br>
+  1- Clone the repository: <br>
     `git clone git@github.com:eduardoprado1369/car-shop.git` <br>
   2- Install the dependencies: <br>
     `npm install`
