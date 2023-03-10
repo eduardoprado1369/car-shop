@@ -7,7 +7,7 @@ This application was fully tested using integration tests.
 * TypeScript
 * MongoDB
 * Mongoose ODM
-* Noje.js
+* Node.js
 * Express.js
 * Chai
 * Mocha
