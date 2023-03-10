@@ -16,7 +16,7 @@ This is a back-end project which uses the principles of `OOP` to create a CRUD A
 * With Docker: <br>
   1- Clone the repository: <br>
       `git clone git@github.com:eduardoprado1369/car-shop.git` <br>
-  2- Start the containers that run Node and MongoDB services:
+  2- Start the containers that run Node and MongoDB services: <br>
     `docker-compose up -d`
    - The default port is `27017`
   3- Access the container's CLI:
