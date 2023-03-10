@@ -4,6 +4,7 @@ This is a back-end project which uses the principles of `OOP` to create a CRUD A
 This application was fully tested using integration tests.
 
 # Technologies used
+<details>
 * TypeScript
 * MongoDB
 * Mongoose ODM
@@ -12,6 +13,7 @@ This application was fully tested using integration tests.
 * Chai
 * Mocha
 * Sinon
+</details>
 
 # How to run the project
 * With Docker:  
