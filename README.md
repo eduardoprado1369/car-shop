@@ -1,7 +1,7 @@
 # Project Car Shop
 
 This is a back-end project which uses `Object-oriented programming` (`OOP`) to create a CRUD API responsible for managing a Car Shop, in which users can see the existing vehicles, filter them by id, add new vehicles, update and delete existing vehicles.  
-The service layer of this application was fully tested using unit tests.
+The service layer of this application was fully tested using `unit tests`.
 
 # Technologies used
 * TypeScript
