@@ -18,7 +18,7 @@ The service layer of this application was fully tested using `unit tests`.
   1. Clone the repository:  
      `git clone git@github.com:eduardoprado1369/car-shop.git`  
   2. Start the containers that run Node and MongoDB services:  
-    `docker-compose up -d` <br> * **The default port is `27017`** <br>
+    `docker-compose up -d` <br> * **The default ports are `3001` and `27017`** <br>
   3. Access the container's CLI: <br>
     `docker exec -it car_shop bash` <br>
   4. Install the dependencies: <br>
